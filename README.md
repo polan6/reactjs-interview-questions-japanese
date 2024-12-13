@@ -301,27 +301,27 @@
 
 2.  ### Reactの進化の背後にある歴史は？
 
-    The history of ReactJS started in 2010 with the creation of **XHP**. XHP is a PHP extension which improved the syntax of the language such that XML document fragments become valid PHP expressions and the primary purpose was used to create custom and reusable HTML elements.
+    ReactJSの歴史は、2010年の**XHP**の作成から始まった。XHPはPHPの拡張機能で、XML文書の断片が有効なPHP式になるように構文を改良したものだ。主な目的は、カスタムで再利用可能なHTML要素を作成することだった。
 
-    The main principle of this extension was to make front-end code easier to understand and to help avoid cross-site scripting attacks. The project was successful to prevent the malicious content submitted by the scrubbing user.
+    この拡張の主な目的は、フロントエンドのコードをわかりやすくし、 クロスサイトスクリプティング攻撃を回避することでした。このプロジェクトは、スクラブユーザーによって送信された悪意のあるコンテンツを防ぐことに成功した。
 
-    But there was a different problem with XHP in which dynamic web applications require many roundtrips to the server, and XHP did not solve this problem. Also, the whole UI was re-rendered for small change in the application. Later, the initial prototype of React is created with the name **FaxJ** by Jordan inspired from XHP. Finally after sometime React has been introduced as a new library into JavaScript world.
+    しかし、動的なウェブアプリケーションはサーバーへの多くのラウンドトリップを必要とするというXHPとは異なる問題があり、XHPはこの問題を解決することができませんでした。また、アプリケーションを少し変更するだけで、UI全体が再レンダリングされていた。その後、XHPから着想を得たJordanによって、Reactの最初のプロトタイプが**FaxJ**という名前で作成された。それからしばらくして、ReactはJavaScriptの世界に新しいライブラリとして導入された。
 
-    **Note:** JSX comes from the idea of XHP
+    **Note:** JSXはXHPのアイデアから生まれた
 
-    **[⬆ Back to Top](#table-of-contents)**
+    **[⬆ トップに戻る](#table-of-contents)**
 
-3.  ### What are the major features of React?
+3.  ### Reactの主な特徴は？
 
-    The major features of React are:
+    Reactの主な特徴は以下の通り：
 
-    - Uses **JSX** syntax, a syntax extension of JS that allows developers to write HTML in their JS code.
-    - It uses **Virtual DOM** instead of Real DOM considering that Real DOM manipulations are expensive.
-    - Supports **server-side rendering** which is useful for Search Engine Optimizations(SEO).
-    - Follows **Unidirectional or one-way** data flow or data binding.
-    - Uses **reusable/composable** UI components to develop the view.
+    - **JSX**構文を使用する。これはJSの構文を拡張したもので、開発者はJSコードにHTMLを記述することができる。
+    - Real DOMの操作がexpensiveであることを考慮し、Real DOMの代わりに**Virtual DOM**を使用する。
+    - 検索エンジン最適化（SEO）に便利な**サーバーサイド・レンダリング**をサポートしています。
+    - **一方向**のデータフローやデータバインディングに従います。
+    - ビューを開発するために**再利用可能な/構成可能な**UIコンポーネントを使用します。
 
-    **[⬆ Back to Top](#table-of-contents)**
+    **[⬆ トップに戻る](#table-of-contents)**
 
 4.  ### What is JSX?
 
