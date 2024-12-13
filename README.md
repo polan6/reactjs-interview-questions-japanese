@@ -1,73 +1,29 @@
-# React Interview Questions & Answers
+# React面接の質問と回答
 
-> Click :star:if you like the project. Pull Request are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
-
----
-
-<div>
-<p align="center">
-  <a href="https://www.greatfrontend.com/questions/react?utm_source=github&utm_medium=referral&utm_campaign=sudheerj-react&gnrs=sudheerj">
-    <img src="./images/collab/greatfrontend-banner4x.png" alt="GreatFrontEnd React Interview Questions" width="100%">
-  </a>
-</p>
-</div>
-
-> 💡 Nail React interviews with questions and solutions from ex-interviewers! [Try GreatFrontEnd →](https://www.greatfrontend.com/questions/react?utm_source=github&utm_medium=referral&utm_campaign=sudheerj-react&gnrs=sudheerj) 💡
-
----
-
-<div>
-<p align="center">
-  <a href="https://www.frontendlead.com/coding-questions?utm_source=github&utm_medium=referral&utm_campaign=sudheerj-react" rel="dofollow">
-    <img src="./images/collab/frontendlead-banner.png" alt="React interview" width="100%">
-  </a>
-</p>
-</div>
-
-> 🚀 Ace React interview questions with solutions from FAANG+ companies! [Try FrontendLead →](https://www.frontendlead.com/coding-questions?utm_source=github&utm_medium=referral&utm_campaign=sudheerj-react) 🚀
-
----
-
-<div>
-<p align="center">
-  <a href=https://zerotomastery.io/?utm_source=github&utm_medium=sponsor&utm_campaign=reactjs-interview-questions>
-    <img src=https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:70/https://www.filepicker.io/api/file/AKYtjj5SSGyJuyZrkAB2 alt="ZTM Logo" width="100" height="50">
-  </a>
-    <ol>
-      <li>I recommend this <a href="https://links.zerotomastery.io/react_sudheer">React course</a> if you’re serious about learning React and want to go beyond the basics</li>
-      <li>Want to ace your coding interview and get hired at your dream company? <a href="http://links.zerotomastery.io/mci_sudheer">Take this coding interview bootcamp</a></li>
-    </ol>
-  </p>
-</div>
-
----
-
-**Note:** This repository is specific to ReactJS. Please check [Javascript Interview questions](https://github.com/sudheerj/javascript-interview-questions) for core javascript questions and [DataStructures and Algorithms](https://github.com/sudheerj/datastructures-algorithms) for DSA related questions or problems.
-
-### Table of Contents
+### 目次
 
 <details open>
 <summary>
-Hide/Show table of contents
+目次を表示/非表示
 </summary>
 
 | No. | Questions                                                                                                                                                                                                                        |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     | **Core React**                                                                                                                                                                                                                   |
-| 1   | [What is React?](#what-is-react)                                                                                                                                                                                                 |
-| 2   | [What is the history behind React evolution?](#What-is-the-history-behind-React-evolution)                                                                                                                                       |
-| 3   | [What are the major features of React?](#what-are-the-major-features-of-react)                                                                                                                                                   |
-| 4   | [What is JSX?](#what-is-jsx)                                                                                                                                                                                                     |
-| 5   | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component)                                                                                                                   |
-| 6   | [How to create components in React?](#how-to-create-components-in-react)                                                                                                                                                         |
-| 7   | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component)                                                                                                             |
-| 8   | [What are Pure Components?](#what-are-pure-components)                                                                                                                                                                           |
-| 9   | [What is state in React?](#what-is-state-in-react)                                                                                                                                                                               |
-| 10  | [What are props in React?](#what-are-props-in-react)                                                                                                                                                                             |
-| 11  | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props)                                                                                                                               |
-| 12  | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling)                                                                                                   |
-| 13  | [What are synthetic events in React?](#what-are-synthetic-events-in-react)                                                                                                                                                       |
-| 14  | [What are inline conditional expressions?](#what-are-inline-conditional-expressions)                                                                                                                                             |
+|     | **Reactの核**                                                                                                                                                                                                                   |
+| 1   | [Reactとは何か？](#what-is-react)                                                                                                                                                                                                 |
+| 2   | [Reactの進化の背後にある歴史は？](#What-is-the-history-behind-React-evolution)                                                                                                                                       |
+| 3   | [Reactの主な特徴は？](#what-are-the-major-features-of-react)                                                                                                                                                   |
+| 4   | [JSXとは何か？](#what-is-jsx)                                                                                                                                                                                                     |
+| 5   | [エレメントとコンポーネントの違いは？](#what-is-the-difference-between-element-and-component)                                                                                                                   |
+| 6   | [Reactではどのようにコンポーネントを作るか？](#how-to-create-components-in-react)                                                                                                                                                         |
+| 7   | [関数コンポーネントではなくクラスコンポーネントを使用するのはどのような場合か？](#when-to-use-a-class-component-over-a-function-component)                                                                                                             |
+| 8   | [純粋コンポーネントとは何か？](#what-are-pure-components)                                                                                                                                                                           |
+| 9   | [Reactでのstateとは何か？](#what-is-state-in-react)                                                                                                                                                                               |
+| 10  | [Reactでのpropsとは何か？](#what-are-props-in-react)                                                                                                                                                                             |
+| 11  | [stateとpropsの違いは何か？](#what-is-the-difference-between-state-and-props)                                                                                                                               |
+| 12  | [HTMLとReactのイベント処理の違いは何か？](#what-is-the-difference-between-html-and-react-event-handling)                                                                                                   |
+| 13  | [Reactの合成イベント(Synthetic event)とは？](#what-are-synthetic-events-in-react)                                                                                                                                                       |
+| 14  | [インライン条件式とは何か？](#what-are-inline-conditional-expressions)                                                                                                                                             |
 | 15  | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements)                                                                     |
 | 16  | [What is Virtual DOM?](#what-is-virtual-dom)                                                                                                                                                                                     |
 | 17  | [How Virtual DOM works?](#how-virtual-dom-works)                                                                                                                                                                                 |
@@ -333,119 +289,17 @@ Hide/Show table of contents
 | 270 | [What are the differences between page router and app router in nextjs?](#what-are-the-differences-between-page-router-and-app-router-in-nextjs)                                                                                                                                        |
 </details>
 
-### Table of Contents
-
-<details open>
-<summary>
-Hide/Show table of contents
-</summary>
-
-| No. | Questions                                                                                                                                                                                  |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|     | **Old Q&A**                                                                                                                                                                                |
-| 1   | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly)                                                                                               |
-| 2   | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)                                             |
-| 3   | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks)                                                                         |
-| 4   | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback)                                                                       |
-| 5   | [What is the use of refs?](#what-is-the-use-of-refs)                                                                                                                                       |
-| 6   | [How to create refs?](#how-to-create-refs)                                                                                                                                                 |
-| 7   | [What are forward refs?](#what-are-forward-refs)                                                                                                                                           |
-| 8   | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode)                                                     |
-| 9   | [Why are String Refs legacy?](#why-are-string-refs-legacy)                                                                                                                                 |
-| 10  | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle)                                                                             |
-| 11  | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react)                                                                                                       |
-| 12  | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component)                                                                                               |
-| 13  | [What is context?](#what-is-context)                                                                                                                                                       |
-| 14  | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument)                                                 |
-| 15  | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name)                                                                                                     |
-| 16  | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
-| 17  | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16)                                                                                                          |
-| 18  | [How are error boundaries handled in React v15?](#how-are-error-boundaries-handled-in-react-v15)                                                                                           |
-| 19  | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom)                                                                                   |
-| 20  | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                               |
-| 21  | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                                   |
-| 22  | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state)                                                                                 |
-| 23  | [How you use decorators in React?](#how-you-use-decorators-in-react)                                                                                                                       |
-| 24  | [What is CRA and its benefits?](#what-is-cra-and-its-benefits)                                                                                                                             |
-| 25  | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting)                                                                                       |
-| 26  | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                                 |
-| 27  | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                                   |
-| 28  | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                     |
-| 29  | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components)                                                                                   |
-| 30  | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                         |
-| 31  | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate)                                                                                               |
-| 32  | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                                   |
-| 33  | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate)                                                         |
-| 34  | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate)                                                       |
-| 35  | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes)                     |
-| 36  | [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods)                                                     |
-| 37  | [How to listen to state changes?](#how-to-listen-to-state-changes)                                                                                                                         |
-| 38  | [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state)                             |
-| 39  | [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html)                                                                                 |
-| 40  | [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state)                                                                       |
-| 41  | [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app)                                           |
-| 42  | [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app)                                                                             |
-| 43  | [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app)                                                             |
-| 44  | [How to update a component every second?](#how-to-update-a-component-every-second)                                                                                                         |
-| 45  | [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once)                                                                                       |
-| 46  | [How to define constants in React?](#how-to-define-constants-in-react)                                                                                                                     |
-| 47  | [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react)                                                                             |
-| 48  | [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call)   |
-| 49  | [What are render props?](#what-are-render-props)                                                                                                                                           |
-| 50  | [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load)                                                                                                                   |
-| 51  | [How to use connect from React Redux?](#how-to-use-connect-from-react-redux)                                                                                                               |
-| 52  | [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator)                                                           |
-| 53  | [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application)                                                                           |
-| 54  | [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react)                                                                         |
-| 55  | [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)                                                                   |
-| 56  | [What are HOC factory implementations?](#what-are-hoc-factory-implementations)                                                                                                             |
-| 57  | [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)                                                               |
-| 58  | [Why do you not need error boundaries for event handlers?](#why-do-you-not-need-error-boundaries-for-event-handlers)                                                                       |
-| 59  | [What is the difference between try catch block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)                                               |
-| 60  | [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)                                                       |
-| 61  | [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)                                                                               |
-| 62  | [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)                                                                                                       |
-| 63  | [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)                                                                   |
-| 64  | [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)                                                                             |
-| 65  | [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)                                                                                       |
-| 66  | [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)                                                                             |
-| 67  | [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)                                                                                 |
-| 68  | [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)                                                                             |
-| 69  | [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)                                                                                                                 |
-| 70  | [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)                                                                                                             |
-| 71  | [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)                                                                               |
-| 72  | [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)                                                                                             |
-| 73  | [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)                                                                                           |
-| 74  | [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)                                                                                                       |
-| 75  | [Give an example on How to use context?](#give-an-example-on-how-to-use-context)                                                                                                           |
-| 76  | [How do you use contextType?](#how-do-you-use-contexttype)                                                                                                                                 |
-| 77  | [What is a consumer?](#what-is-a-consumer)                                                                                                                                                 |
-| 78  | [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)                                                           |
-| 79  | [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)                                                                                                 |
-| 80  | [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)                                                 |
-| 81  | [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)                     |
-| 82  | [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)                                                                                     |
-| 83  | [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)                                                                                                       |
-| 84  | [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)                                                                                                     |
-| 85  | [What is react scripts?](#what-is-react-scripts)                                                                                                                                           |
-| 86  | [What are the features of create react app?](#what-are-the-features-of-create-react-app)                                                                                                   |
-| 87  | [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)                                                                                     |
-| 88  | [How do you get redux scaffolding using create-react-app?](#how-do-you-get-redux-scaffolding-using-create-react-app)                                                                       |
-| 89  | [What is state mutation and how to prevent it?](#what-is-state-mutation-and-how-to-prevent-it)                                                                                             |
-
-</details>
-
 ## Core React
 
-1.  ### What is React?
+1.  ### Reactとは何か？
 
-    React (aka React.js or ReactJS) is an **open-source front-end JavaScript library** that is used for building composable user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps based on components in a declarative approach.
+    React（別名React.jsまたはReactJS）は、**オープンソースのフロントエンドJavaScriptライブラリ**であり、特にシングルページのアプリケーション向けに、コンポーザブルなユーザーインターフェイスを構築するために使用される。Reactは、宣言的なアプローチでコンポーネントに基づくウェブやモバイルアプリのビューレイヤーを処理するために使用される。
 
-    React was created by [Jordan Walke](https://github.com/jordwalke), a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+    Reactは、Facebookで働くソフトウェアエンジニアの[Jordan Walke](https://github.com/jordwalke)によって作られた。Reactは2011年にFacebookのニュースフィードに、2012年にはInstagramに初めて導入された。
 
-    **[⬆ Back to Top](#table-of-contents)**
+    **[⬆ トップに戻る](#table-of-contents)**
 
-2.  ### What is the history behind React evolution?
+2.  ### Reactの進化の背後にある歴史は？
 
     The history of ReactJS started in 2010 with the creation of **XHP**. XHP is a PHP extension which improved the syntax of the language such that XML document fragments become valid PHP expressions and the primary purpose was used to create custom and reusable HTML elements.
 
