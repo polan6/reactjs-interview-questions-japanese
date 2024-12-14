@@ -10,7 +10,7 @@
 | No. | Questions                                                                                                                                                                                                                        |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     | **Reactの核**                                                                                                                                                                                                                   |
-| 1   | [Reactとは何か？](#what-is-react)                                                                                                                                                                                                 |
+| 1   | [Reactとは何か？](#Reactとは何か？)                                                                                                                                                                                                 |
 | 2   | [Reactの進化の背後にある歴史は？](#What-is-the-history-behind-React-evolution)                                                                                                                                       |
 | 3   | [Reactの主な特徴は？](#what-are-the-major-features-of-react)                                                                                                                                                   |
 | 4   | [JSXとは何か？](#what-is-jsx)                                                                                                                                                                                                     |
@@ -297,7 +297,7 @@
 
     Reactは、Facebookで働くソフトウェアエンジニアの[Jordan Walke](https://github.com/jordwalke)によって作られた。Reactは2011年にFacebookのニュースフィードに、2012年にはInstagramに初めて導入された。
 
-    **[⬆ トップに戻る](#table-of-contents)**
+    **[⬆ トップに戻る](#目次)**
 
 2.  ### Reactの進化の背後にある歴史は？
 
