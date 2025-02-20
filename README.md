@@ -370,21 +370,21 @@
 
 5.  ### エレメントとコンポーネントの違いは？
 
-    An _Element_ is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. _Elements_ can contain other _Elements_ in their props. Creating a React element is cheap. Once an element is created, it cannot be mutated.
+    _エレメント_は、DOMノードやその他のコンポーネントとして画面に表示させたいものを記述したプレーンなオブジェクトです。_エレメント_は、他の_エレメント_をpropsに含むことができます。React要素を作成するのは簡単です。一度要素が作成されると、それを変更することはできません。
 
-    The JavaScript representation(Without JSX) of React Element would be as follows:
+    ReactエレメントのJavaScript表現（JSXなし）は以下のようになる：
 
     ```javascript
     const element = React.createElement("div", { id: "login-btn" }, "Login");
     ```
 
-    and this element can be simiplified using JSX
+    そしてこの要素は、JSXを使って単純化することができる。
 
     ```html
     <div id="login-btn">Login</div>
     ```
 
-    The above `React.createElement()` function returns an object as below:
+    上記の `React.createElement()` 関数は以下のようなオブジェクトを返す：
 
     ```javascript
     {
@@ -396,9 +396,9 @@
     }
     ```
 
-    Finally, this element renders to the DOM using `ReactDOM.render()`.
+    最後に、この要素は `ReactDOM.render()` を使ってDOMにレンダリングされる。
 
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
+    **コンポーネント**はいくつかの異なる方法で宣言することができます。`render()`メソッドを持つクラスにすることもできるし、関数として定義することもできる。どちらの場合でも、入力としてpropsを受け取り、出力としてJSXツリーを返します：
 
     ```javascript
     const Button = ({ handleLogin }) => (
@@ -408,7 +408,7 @@
     );
     ```
 
-    Then JSX gets transpiled to a `React.createElement()` function tree:
+    そして、JSXは`React.createElement()`関数ツリーにトランスパイルされる：
 
     ```javascript
     const Button = ({ handleLogin }) =>
@@ -421,11 +421,11 @@
 
     **[⬆ トップに戻る](#目次)**
 
-6.  ### How to create components in React?
+6.  ### Reactではどのようにコンポーネントを作るか？
 
-    Components are the building blocks of creating User Interfaces(UI) in React. There are two possible ways to create a component.
+    コンポーネントは、Reactでユーザーインターフェース（UI）を作成するためのビルディングブロックだ。コンポーネントを作成するには、2つの方法がある。
 
-    1. **Function Components:** This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as the one and only one parameter and return React elements to render the output:
+    1. **関数コンポーネント：** これはコンポーネントを作成する最も単純な方法です。これらは純粋なJavaScript関数で、propsオブジェクトを唯一のパラメータとして受け取り、出力をレンダリングするReact要素を返します：
 
        ```jsx harmony
        function Greeting({ message }) {
@@ -433,7 +433,7 @@
        }
        ```
 
-    2. **Class Components:** You can also use ES6 class to define a component. The above function component can be written as a class component:
+    2. **クラス・コンポーネント:** ES6クラスを使ってコンポーネントを定義することもできます。上記の関数コンポーネントはクラス・コンポーネントとして書くことができます：
 
        ```jsx harmony
        class Greeting extends React.Component {
@@ -445,28 +445,28 @@
 
     **[⬆ トップに戻る](#目次)**
 
-7.  ### When to use a Class Component over a Function Component?
+7.  ### 関数コンポーネントではなくクラスコンポーネントを使用するのはどのような場合か？
 
-    After the addition of Hooks(i.e. React 16.8 onwards) it is always recommended to use Function components over Class components in React. Because you could use state, lifecycle methods and other features that were only available in class component present in function component too.
+    フックが追加された後（つまりReact 16.8以降）、Reactではクラス・コンポーネントよりも関数コンポーネントを使うことが推奨されている。なぜなら、ステートやライフサイクル・メソッドなど、クラス・コンポーネントにしかなかった機能がファンクション・コンポーネントでも使えるからだ。
 
-    But even there are two reasons to use Class components over Function components.
+    しかし、FunctionコンポーネントよりもClassコンポーネントを使うべき理由が2つある。
 
-    1. If you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.
-    2. In older versions, If the component needs _state or lifecycle methods_ then you need to use class component.
+    1. Error Boundaryのように、関数コンポーネントに相当する機能がまだ存在しないReactの機能が必要な場合。
+    2. 古いバージョンでは、コンポーネントが_state_や_lifecycle_メソッドを必要とする場合、クラスコンポーネントを使用する必要があります。
 
-    So the summary to this question is as follows:
+    というわけで、この質問に対する要約は以下の通りです：
 
-    **Use Function Components:**
+    **関数コンポーネントを使う。
 
-    - If you don't need state or lifecycle methods, and your component is purely presentational.
-    - For simplicity, readability, and modern code practices, especially with the use of React Hooks for state and side effects.
+    - ステートやライフサイクル・メソッドが必要なく、コンポーネントが純粋に表現的である場合。
+    - シンプルさ、読みやすさ、モダンなコードプラクティス、特にステートと副作用にReact Hooksを使用する場合。
 
-    **Use Class Components:**
+    **クラス・コンポーネントを使用する。
 
-    - If you need to manage state or use lifecycle methods.
-    - In scenarios where backward compatibility or integration with older code is necessary.
+    - ステートを管理したり、ライフサイクルメソッドを使用する必要がある場合。
+    - 後方互換性や古いコードとの統合が必要な場合。
 
-    **Note:** You can also use reusable [react error boundary](https://github.com/bvaughn/react-error-boundary) third-party component without writing any class. i.e, No need to use class components for Error boundaries.
+    **注:**再利用可能な[react error boundary](https://github.com/bvaughn/react-error-boundary)サードパーティコンポーネントも、クラスを記述することなく使用できます。
 
     The usage of Error boundaries from the above library is quite straight forward.
 
@@ -484,7 +484,7 @@
 
     **[⬆ トップに戻る](#目次)**
 
-8.  ### What are Pure Components?
+8.  ### 純粋コンポーネントとは何か？
 
     Pure components are the components which render the same output for the same state and props. In function components, you can achieve these pure components through memoized `React.memo()` API wrapping around the component. This API prevents unnecessary re-renders by comparing the previous props and new props using shallow comparison. So it will be helpful for performance optimizations.
 
@@ -537,7 +537,7 @@
 
     **[⬆ トップに戻る](#目次)**
 
-9.  ### What is state in React?
+9.  ### Reactでのstateとは何か？
 
     _State_ of a component is an object that holds some information that may change over the lifetime of the component. The important point is whenever the state object changes, the component re-renders. It is always recommended to make our state as simple as possible and minimize the number of stateful components.
 
@@ -592,7 +592,7 @@
 
     **[⬆ トップに戻る](#目次)**
 
-10. ### What are props in React?
+10. ### Reactでのpropsとは何か？
 
     _Props_ are inputs to components. They are single values or objects containing a set of values that are passed to components on creation similar to HTML-tag attributes. Here, the data is passed down from a parent component to a child component.
 
@@ -691,7 +691,7 @@ class ParentComponent extends React.Component {
 
 **[⬆ トップに戻る](#目次)**
 
-11. ### What is the difference between state and props?
+11. ### stateとpropsの違いは何か？
 
     In React, both `state` and `props` are plain JavaScript objects and used to manage the data of a component, but they are used in different ways and have different characteristics.
 
@@ -740,7 +740,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ トップに戻る](#目次)**
 
-13. ### What are synthetic events in React?
+13. ### Reactの合成イベント(Synthetic event)とは？
 
     `SyntheticEvent` is a cross-browser wrapper around the browser's native event. Its API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers. The native events can be accessed directly from synthetic events using `nativeEvent` attribute.
 
@@ -763,7 +763,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ トップに戻る](#目次)**
 
-14. ### What are inline conditional expressions?
+14. ### インライン条件式とは何か？
 
     You can use either _if statements_ or _ternary expressions_ which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator `&&`.
 
