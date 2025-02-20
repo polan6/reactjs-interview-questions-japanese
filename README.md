@@ -456,21 +456,21 @@
 
     というわけで、この質問に対する要約は以下の通りです：
 
-    **関数コンポーネントを使う。
+    **関数コンポーネントを使う。**
 
     - ステートやライフサイクル・メソッドが必要なく、コンポーネントが純粋に表現的である場合。
     - シンプルさ、読みやすさ、モダンなコードプラクティス、特にステートと副作用にReact Hooksを使用する場合。
 
-    **クラス・コンポーネントを使用する。
+    **クラス・コンポーネントを使用する。**
 
     - ステートを管理したり、ライフサイクルメソッドを使用する必要がある場合。
     - 後方互換性や古いコードとの統合が必要な場合。
 
     **注:**再利用可能な[react error boundary](https://github.com/bvaughn/react-error-boundary)サードパーティコンポーネントも、クラスを記述することなく使用できます。
 
-    The usage of Error boundaries from the above library is quite straight forward.
+    上記ライブラリのError boundaryの使い方は非常に簡単です。
 
-    > **_Note when using react-error-boundary:_** ErrorBoundary is a client component. You can only pass props to it that are serializable or use it in files that have a `"use client";` directive.
+    > react-error-boundary:_** ErrorBoundaryはクライアントコンポーネントです。シリアライズ可能なpropsを渡すか、`「use client」;`ディレクティブを持つファイルでのみ使用できます。
 
     ```jsx
     "use client";
@@ -486,17 +486,17 @@
 
 8.  ### 純粋コンポーネントとは何か？
 
-    Pure components are the components which render the same output for the same state and props. In function components, you can achieve these pure components through memoized `React.memo()` API wrapping around the component. This API prevents unnecessary re-renders by comparing the previous props and new props using shallow comparison. So it will be helpful for performance optimizations.
+    ピュアコンポーネントとは、同じステートとプロップに対して同じ出力をレンダリングするコンポーネントのことです。関数コンポーネントでは、コンポーネントをラップするメモ化された `React.memo()` API によって、これらのピュアコンポーネントを実現できます。このAPIは、シャロー比較を使用して以前のpropsと新しいpropsを比較することで、不要な再レンダリングを防ぎます。そのため、パフォーマンスの最適化に役立ちます。
 
-    But at the same time, it won't compare the previous state with the current state because function component itself prevents the unnecessary rendering by default when you set the same state again.
+    しかし同時に、同じ状態を再度設定する場合、関数コンポーネント自体がデフォルトで不要なレンダリングを防ぐため、前の状態と現在の状態を比較することはありません。
 
-    The syntactic representation of memoized components looks like below,
+    メモ化されたコンポーネントの構文表現は以下のようになる、
 
     ```jsx
     const MemoizedComponent = memo(SomeComponent, arePropsEqual?);
     ```
 
-    Below is the example of how child component(i.e., EmployeeProfile) prevents re-renders for the same props passed by parent component(i.e.,EmployeeRegForm).
+    以下は、子コンポーネント(EmployeeProfile)が、親コンポーネント(EmployeeRegForm)から渡された同じpropsの再レンダリングを防ぐ方法の例です。
 
     ```jsx
     import { memo, useState } from "react";
@@ -529,21 +529,21 @@
     }
     ```
 
-    In the above code, the email prop has not been passed to child component. So there won't be any re-renders for email prop change.
+    上記のコードでは、email propは子コンポーネントに渡されていません。そのため、email propの変更に伴う再レンダリングは発生しません。
 
-    In class components, the components extending _`React.PureComponent`_ instead of _`React.Component`_ become the pure components. When props or state changes, _PureComponent_ will do a shallow comparison on both props and state by invoking `shouldComponentUpdate()` lifecycle method.
+    クラスコンポーネントでは、_`React.Component`_の代わりに_`React.PureComponent`_を拡張したコンポーネントがピュアコンポーネントになります。propsまたはstateが変更されると、_`PureComponent_`は`shouldComponentUpdate()`ライフサイクルメソッドを呼び出して、propsとstateの両方で浅い比較を行います。
 
-    **Note:** `React.memo()` is a higher-order component.
+    **Note:** `React.memo()`は高階コンポーネントである。
 
     **[⬆ トップに戻る](#目次)**
 
 9.  ### Reactでのstateとは何か？
 
-    _State_ of a component is an object that holds some information that may change over the lifetime of the component. The important point is whenever the state object changes, the component re-renders. It is always recommended to make our state as simple as possible and minimize the number of stateful components.
+    コンポーネントの_State_は、コンポーネントの寿命の間に変更される可能性のある情報を保持するオブジェクトです。重要な点は、ステートオブジェクトが変更されるたびに、コンポーネントが再レンダリングされるということです。状態をできるだけシンプルにし、ステートフルなコンポーネントの数を最小限にすることを常にお勧めします。
 
     ![state](images/state.jpg)
 
-    Let's take an example of **User** component with `message` state. Here, **useState** hook has been used to add state to the User component and it returns an array with current state and function to update it.
+    `message`ステートを持つ**User**コンポーネントの例を見てみよう。ここでは、**useState**フックを使ってUserコンポーネントに状態を追加し、現在の状態とそれを更新する関数を配列で返しています。
 
     ```jsx harmony
     import { useState } from "react";
@@ -559,7 +559,7 @@
     }
     ```
 
-    Whenever React calls your component or access `useState` hook, it gives you a snapshot of the state for that particular render.
+    Reactがあなたのコンポーネントを呼び出したり、`useState`フックにアクセスしたりするたびに、その特定のレンダリングの状態のスナップショットを提供します。
 
     <details><summary><b>See Class</b></summary>
     <p>
@@ -588,33 +588,33 @@
     </p>
     </details>
 
-    State is similar to props, but it is private and fully controlled by the component ,i.e., it is not accessible to any other component till the owner component decides to pass it.
+    ステートはpropsと似ているが、プライベートであり、コンポーネントによって完全にコントロールされる。
 
     **[⬆ トップに戻る](#目次)**
 
 10. ### Reactでのpropsとは何か？
 
-    _Props_ are inputs to components. They are single values or objects containing a set of values that are passed to components on creation similar to HTML-tag attributes. Here, the data is passed down from a parent component to a child component.
+    _Props_はコンポーネントへの入力です。これらは、HTMLタグの属性と同様に、作成時にコンポーネントに渡される単一の値、または値のセットを含むオブジェクトです。ここでは、データは親コンポーネントから子コンポーネントに渡されます。
 
-    The primary purpose of props in React is to provide following component functionality:
+    Reactにおけるpropsの主な目的は、以下のコンポーネント機能を提供することです：
 
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-    3. Use via `this.props.reactProp` inside component's `render()` method.
+    1. カスタムデータをコンポーネントに渡す。
+    2. 状態変更のトリガー。
+    3. コンポーネントの `render()` メソッド内で `this.props.reactProp` を介して使用する。
 
-    For example, let us create an element with `reactProp` property:
+    例えば、`reactProp` プロパティを持つ要素を作成してみましょう：
 
     ```jsx harmony
     <Element reactProp={"1"} />
     ```
 
-    This `reactProp` (or whatever you came up with) attribute name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+    この`reactProp`（またはあなたが考えたもの）属性名は、Reactのネイティブのpropsオブジェクトにアタッチされるプロパティになります。
 
     ```jsx harmony
     props.reactProp;
     ```
 
-    For example, the usage of props in function component looks like below:
+    例えば、ファンクションコンポーネントでのpropsの使い方は以下のようになります：
 
     ```jsx
     import React from "react";
@@ -640,7 +640,7 @@
     };
     ```
 
-The properties from props object can be accessed directly using destructing feature from ES6 (ECMAScript 2015). It is also possible to fallback to default value when the prop value is not specified. The above child component can be simplified like below.
+propsオブジェクトのプロパティは、ES6（ECMAScript 2015）のデストラクト機能を使って直接アクセスできる。また、propsの値が指定されていない場合、デフォルト値にフォールバックすることも可能です。上記の子コンポーネントは以下のように単純化できます。
 
 ```jsx harmony
 const ChildComponent = ({ name, age, gender = "male" }) => {
@@ -654,10 +654,10 @@ const ChildComponent = ({ name, age, gender = "male" }) => {
 };
 ```
 
-**Note:** The default value won't be used if you pass `null` or `0` value. i.e, default value is only used if the prop value is missed or `undefined` value has been passed.
+**Note:** `null`値や`0`値を渡した場合はデフォルト値は使用されません。つまり、デフォルト値が使用されるのは、prop値に指定がないか、`undefined`値が渡された場合のみです。
 
   <details><summary><b>See Class</b></summary>
-     The Props accessed in Class Based Component as below
+     クラス・ベース・コンポーネントでアクセスされる小道具は以下の通り。
 
 ```jsx
 import React from "react";
